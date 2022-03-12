@@ -81,10 +81,57 @@ function clearStatusClass(element) {
 // questions 
 const questions = [
     {
-        question: 'What is 2 +2?', 
+        question: 'How do you create a function in JavaScript?', 
         answers: [ 
-            { text: '4', correct: true },
-            { text: '22', correct: false }
+            { text: 'function myFunction()', correct: true },
+            { text: 'function = myFunction()', correct: false }, 
+            { text: 'function: myFunction()', correct: false }, 
+            { text: 'createFunction myFunction()', correct: false }
+        ]
+    },
+    {
+        question: 'How could you get a random integer between 0-9?', 
+        answers: [ 
+            { text: 'Math.floor(Math.random()', correct: false},
+            { text: 'Math.floor(Math.random() * 9)', correct: false }, 
+            { text: 'Math.floor(Math.random() * 0-9', correct: false }, 
+            { text: 'Math.floor(Math.random() * 10)', correct: true }
+        ]
+    }, 
+    {
+        question: 'What is a popular debugging tool in JavaScript?', 
+        answers: [ 
+            { text: 'Booleans', correct: false },
+            { text: 'Console.log', correct: true }, 
+            { text: 'Debug.log', correct: false }, 
+            { text: 'Arrays', correct: false }
+        ]
+    }, 
+    {
+        question: 'In Javascript, which data types can ONLY two values?', 
+        answers: [ 
+            { text: 'Arrays', correct: false },
+            { text: 'Objects', correct: false }, 
+            { text: 'Booleans', correct: true }, 
+            { text: 'Strings', correct: false }
+        ]
+    }, 
+    {
+        question: 'An HTML event can do which of the following things?', 
+        answers: [ 
+            { text: 'An HTML web page has finished loading', correct: false },
+            { text: 'An HTML input field was changed', correct: false }, 
+            { text: 'An HTML button was clicked', correct: false}, 
+            { text: 'All of the above', correct: true}
+        ]
+    },
+    {
+        question: 'Which statement "jumps out" of the loop?', 
+        answers: [ 
+            { text: 'continue;', correct: false },
+            { text: 'jump-out;', correct: false }, 
+            { text: 'break;', correct: true}, 
+            { text: 'over;', correct: false}
         ]
     }
 ]
