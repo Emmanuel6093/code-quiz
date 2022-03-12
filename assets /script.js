@@ -10,6 +10,10 @@ let shuffledQuestions, currentQuestionIndex
 
 // start button
 startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++ 
+    setNextQuestion()
+})
 
 function startGame() {
     startButton.classList.add('hide')
@@ -46,8 +50,32 @@ function resetState () {
     }
 }
 
-function selectAnswer() {
+function selectAnswer(e) {
+    const selectedButton = e.target 
+    const correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide')
+    } else 
+    startButton.innerText = 'Restart' 
+    startButton.classList.remove('hide')
+}
 
+function setStatusClass(element, correct) {
+    clearStatusClass(element) 
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
+} 
+
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
 }
 
 // questions 
