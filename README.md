@@ -13,3 +13,6 @@ When the question is answered a new button should appear titled "Next", that whe
 As you answer you will have a score being set based on how much time you had left at the end of the coding quiz. Once you reach the end the user will be able to see their score, that score will be stored, and the user will be prompted to input their initials, and will also be able to see all of the their high-scores. The user will also have a button titled "Restart" to restart the game. 
 
 
+![image](./images/code-quiz.png)
+
+[https://emmanuel6093.github.io/code-quiz/](https://emmanuel6093.github.io/code-quiz/)
