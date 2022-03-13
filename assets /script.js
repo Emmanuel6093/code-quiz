@@ -6,6 +6,8 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById
 ('answer-buttons') 
 
+
+
 let shuffledQuestions, currentQuestionIndex 
 
 // start button
@@ -16,6 +18,20 @@ nextButton.addEventListener('click', () => {
 })
 
 function startGame() {
+
+    // timer starts when start button is clicked 
+    var counter = 130; 
+setInterval( function (){
+    counter--; 
+
+    if (counter >=0){
+        id = document.getElementById('count');
+        id.innerHTML = counter;
+    }
+
+
+}, 1000);
+
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0 
@@ -40,9 +56,11 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer)
         answerButtonsElement.appendChild(button)
     })
+
 }
 
 function resetState () {
+    clearStatusClass(document.body)
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild
@@ -59,9 +77,10 @@ function selectAnswer(e) {
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
-    } else 
+    } else {
     startButton.innerText = 'Restart' 
     startButton.classList.remove('hide')
+    }
 }
 
 function setStatusClass(element, correct) {
@@ -108,7 +127,7 @@ const questions = [
         ]
     }, 
     {
-        question: 'In Javascript, which data types can ONLY two values?', 
+        question: 'In Javascript, which data types can have ONLY two values?', 
         answers: [ 
             { text: 'Arrays', correct: false },
             { text: 'Objects', correct: false }, 
@@ -135,3 +154,4 @@ const questions = [
         ]
     }
 ]
+

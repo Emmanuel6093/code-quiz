@@ -84,3 +84,32 @@ body.wrong {
     display: none;
 }
 
+.timer {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   padding: 20px;
+   color: white;
+   cursor: not-allowed;
+   font-size: 60px;
+}
+
+#viewHighScore {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 80px;
+    padding: 40px;
+    margin: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+#viewHighScore:hover {
+    font-size: 90px;
+    text-decoration: none;
+    color: hsl(var(--hue), 100%, 50%);
+}
+
+
+
