@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets /style.css" />
-    <title>Emmanuel Code Quiz</title>
-</head>
-
-<body>
-
-    <div class="timer">
-        <h1 id="count">130</h1>
-    </div>
-
-    <div>
-        <a href="#" id="viewHighScore">View High Scores</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+        <div class="high-scores"><h1><a href=./high-scores.html>View High Scores</a></h1></div>
+          <div class="time-counter" id="timer"></div>
+      </nav>
+    </header>
+    <main>
+      <h1>Coding Quiz</h1>
+        <div id="quiz-instructions" class="quiz-instructions">
+          <p>Try to answer as many questions as you can in the time given. Incorrect answers will deduct 10 seconds from your time!
+        </p></div>
+      <div class="quiz-container" id="quiz-container">
+        <div id="button-container"><button id="start" class="btn">Start Quiz</button></div>
+        <p id="question"></p>
+        <ul id="choices"><li id=choiceA></li><li id=choiceB></li><li id=choiceC></li><li id=choiceD></li></ul>
+        
+        </div>
       </div>
-
-    <div class="container">
-        
-
-        <div id="question-container" class="hide">
-            <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
+      <div class="results-container" id="results-container"></div>
+      <form id="save-form" class="display-none">
+        <div class="form-group">
+          <label for="name-input">Your Initials Here</label>
+          <input 
+            id="name-input" 
+            type="text"
+            placeholder="Initials"
+          />
         </div>
-        
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
-        </div>
-     </div>
-    <script src="assets /script.js"></script>
-</body>
+        <button id="save-button" type="submit" class="btn">Save Score</button>
+      </form>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
